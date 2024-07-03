@@ -1,4 +1,4 @@
-# SpotifyBigPicture
+# CustomSpotifyPlayer
 A highly customizable interface that displays your current playback status on Spotify in a beautiful little browser page!
 
 You might want to use this over [Spotify's own (in my opinion, rather underwhelming) full-screen mode](https://i.imgur.com/dvreOAX.jpg), or you can use it for your TV to give [that outdated, low-resolution OSD](https://i.imgur.com/lNfCcrW.jpg) a fresh paint job!
