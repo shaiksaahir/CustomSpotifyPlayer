@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>SpotifyBigPicture</title>
+  <script src="js/spotify-big-picture.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image-more/3.3.0/dom-to-image-more.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/balance-text/3.3.1/balancetext.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nosleep/0.12.0/NoSleep.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="design/style.css"/>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body id="body">
+  <div id="dark-overlay"></div>
+  <div id="toast">
+    <div id="toast-text"></div>
+  </div>
+  <div id="mouse-move-buttons">
+    <div id="top-buttons">
+      <div id="settings-menu-toggle-button" title="Visual Preferences (Hotkey: Space)"></div>
+      <div id="lyrics-toggle-button" title="Toggle Lyrics (Hotkey: L)"></div>
+      <div id="nosleep-lock-button" title="Toggle No-Sleep Mode/Keep Screen Awake"></div>
+      <div id="fullscreen-toggle-button" title="Toggle Fullscreen (Hotkey: F)"></div>
+    </div>
+    <div id="playback-controller">
+      <div id="button-prev"></div>
+      <div id="button-play-pause"></div>
+      <div id="button-next"></div>
+    </div>
+  </div>
+  <div id="settings-wrapper">
+    <div id="settings-shutdown" title="Shutdown/Logout"></div>
+    <div id="settings-top-buttons">
+      <div id="settings-expert-mode-toggle" title="Toggle between Preset Mode and Expert Mode (Hotkey: Ctrl)">Show All Settings</div>
+    </div>
+    <div id="settings-main">
+      <div id="settings-quick-jump"></div>
+      <div id="settings-scroller">
+        <div id="settings-presets"></div>
+        <div id="settings-categories"></div>
+      </div>
+    </div>
+    <div id="settings-bottom-buttons">
+      <div id="settings-reset" title="Reset all settings">Reset</div>
+      <a href="settings" id="settings-external" target="_blank" title="Control every setting from an external tab">Remote Control...</a>
+    </div>
+    <div id="settings-description">
+      <div id="settings-description-header"></div>
+      <div id="settings-description-description"></div>
+      <div id="settings-description-unaffected"></div>
+      <div id="settings-description-overridden"></div>
+    </div>
+    <canvas id="preset-thumbnail-generator-canvas"></canvas>
+  </div>
+  <div id="main">
+    <div id="background-rendered"></div>
+    <div id="prerender-canvas">
+      <div id="background-canvas">
+        <img id="background-canvas-img"/>
+        <div id="background-canvas-overlay"></div>
+        <div id="grain"></div>
+      </div>
+      <div id="artwork">
+        <img id="artwork-img"/>
+      </div>
+    </div>
+    <div id="content">
+      <div id="content-top">
+        <div id="meta-left">
+          <div id="thumbnail-wrapper">
+            <img id="thumbnail" alt=" "/>
+          </div>
+          <div id="context">
+            <div id="context-main"></div>
+            <div id="context-extra"></div>
+          </div>
+        </div>
+        <div id="meta-right">
+          <div id="logo"></div>
+        </div>
+      </div>
+      <div id="content-center">
+        <div id="center-info-main">
+          <div id="artists"></div>
+          <div id="title"><span id="title-main"></span><span id="title-extra"></span></div>
+          <div id="description"></div>
+          <div id="album">
+            <span id="album-title"><span id="album-title-main"></span><span id="album-title-extra"></span></span>
+            <span id="album-release"><span id="release-year"></span><span id="release-full"></span></span>
+          </div>
+        </div>
+        <div id="track-list"></div>
+        <div id="lyrics" title="Click to toggle autoscroll"></div>
+      </div>
+      <div id="content-bottom">
+        <div id="progress">
+          <div id="progress-current"></div>
+          <div id="progress-background"></div>
+        </div>
+        <div id="bottom-meta-container">
+          <div id="bottom-left">
+            <div id="info-symbols">
+              <div id="play-pause"></div>
+              <div id="shuffle"></div>
+              <div id="repeat"></div>
+            </div>
+            <div id="volume">
+              <div id="volume-text"></div>
+              <div id="volume-bar">
+                <div id="volume-current"></div>
+                <div id="volume-background"></div>
+              </div>
+            </div>
+            <div id="device"></div>
+          </div>
+          <div id="clock"></div>
+          <div id="bottom-right">
+            <div id="next-track-info"></div>
+            <div id="timestamp-container">
+              <div id="time-current"></div>
+              <div id="time-slash"></div>
+              <div id="time-total"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-overlay">
+    <div id="modal">
+      <div id="modal-header"></div>
+      <div id="modal-main"></div>
+      <div id="modal-buttons"></div>
+    </div>
+  </div>
+</body>
+</html>
