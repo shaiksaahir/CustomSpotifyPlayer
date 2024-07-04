@@ -1,14 +1,11 @@
 # CustomSpotifyPlayer
-A highly customizable interface that displays your current playback status on Spotify in a beautiful little browser page!
+An extremely customizable front end interface which projects your current playback status on Spotify!
 
-You might want to use this over [Spotify's own (in my opinion, rather underwhelming) full-screen mode](https://i.imgur.com/dvreOAX.jpg), or you can use it for your TV to give [that outdated, low-resolution OSD](https://i.imgur.com/lNfCcrW.jpg) a fresh paint job!
+This interface is mainly read-only, meaning you cannot fully control your music except for basic commands like play, pause, and skip. ([needs to be enabled in the settings first](https://github.com/Selbi182/SpotifyBigPicture/blob/master/SETTINGS.md#enable-playback-controls)). (because of limitations to the Spotify API and because the idea is to set this app up once, and then it permanently runs as a pure information display)
 
-This interface is primarily read-only. Specifically, this means that you **cannot actually control your music**, beyond a few basic commands like play, pause, and skip ([needs to be enabled in the settings first](https://github.com/Selbi182/SpotifyBigPicture/blob/master/SETTINGS.md#enable-playback-controls)). This is both because of limitations to the Spotify API and because the idea is to set this app up once, and then it permanently runs as a pure information display.
-
-An example where this is useful would be hosting a party where you want to let your guests see at any time which songs are up ahead, by putting a monitor near the dance floor that you connect to a Raspberry Pi.
 
 ## Screenshots
-These two examples only show examples of SpotifyBigPicture's default preset. For more screenshots, [see the other presets](https://github.com/Selbi182/SpotifyBigPicture/blob/master/PRESETS.md)!
+These two examples only show examples of default preset. For more screenshots, [see the other presets](https://github.com/Selbi182/SpotifyBigPicture/blob/master/PRESETS.md)!
 
 ### Album View
 ![Deafheaven - Dream House](https://i.imgur.com/oWB5cnW.png)
@@ -18,8 +15,6 @@ These two examples only show examples of SpotifyBigPicture's default preset. For
 
 ### Customization
 Click the gear symbol in the top left of the interface to open the settings for Visual Preferences. Here you can customize the styling of the interface from a number of options with just a few clicks!
-
-Your settings are automatically stored locally, so you won't need to worry about reconfiguring everything each time you reopen the website.
 
 * A full list of every preset can be found here: [PRESETS.md](https://github.com/Selbi182/SpotifyBigPicture/blob/master/PRESETS.md)
 * General information about the settings can be found here: [SETTINGS.md](https://github.com/Selbi182/SpotifyBigPicture/blob/master/SETTINGS.md)
